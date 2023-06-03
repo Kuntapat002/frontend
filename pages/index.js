@@ -1,6 +1,7 @@
 import React from 'react'
 import Head from 'next/head'
 import Image from 'next/image';
+import './slider.css';
 
 
 export default function index() {
@@ -12,6 +13,7 @@ export default function index() {
     </Head>
     
 <style dangerouslySetInnerHTML={{__html: "\n      .bd-placeholder-img {\n        font-size: 1.125rem;\n        text-anchor: middle;\n        -webkit-user-select: none;\n        -moz-user-select: none;\n        user-select: none;\n      }\n\n      @media (min-width: 768px) {\n        .bd-placeholder-img-lg {\n          font-size: 3.5rem;\n        }\n      }\n\n      .b-example-divider {\n        width: 100%;\n        height: 3rem;\n        background-color: rgba(0, 0, 0, .1);\n        border: solid rgba(0, 0, 0, .15);\n        border-width: 1px 0;\n        box-shadow: inset 0 .5em 1.5em rgba(0, 0, 0, .1), inset 0 .125em .5em rgba(0, 0, 0, .15);\n      }\n\n      .b-example-vr {\n        flex-shrink: 0;\n        width: 1.5rem;\n        height: 100vh;\n      }\n\n      .bi {\n        vertical-align: -.125em;\n        fill: currentColor;\n      }\n\n      .nav-scroller {\n        position: relative;\n        z-index: 2;\n        height: 2.75rem;\n        overflow-y: hidden;\n      }\n\n      .nav-scroller .nav {\n        display: flex;\n        flex-wrap: nowrap;\n        padding-bottom: 1rem;\n        margin-top: -1px;\n        overflow-x: auto;\n        text-align: center;\n        white-space: nowrap;\n        -webkit-overflow-scrolling: touch;\n      }\n\n      .btn-bd-primary {\n        --bd-violet-bg: #712cf9;\n        --bd-violet-rgb: 112.520718, 44.062154, 249.437846;\n\n        --bs-btn-font-weight: 600;\n        --bs-btn-color: var(--bs-white);\n        --bs-btn-bg: var(--bd-violet-bg);\n        --bs-btn-border-color: var(--bd-violet-bg);\n        --bs-btn-hover-color: var(--bs-white);\n        --bs-btn-hover-bg: #6528e0;\n        --bs-btn-hover-border-color: #6528e0;\n        --bs-btn-focus-shadow-rgb: var(--bd-violet-rgb);\n        --bs-btn-active-color: var(--bs-btn-hover-color);\n        --bs-btn-active-bg: #5a23c8;\n        --bs-btn-active-border-color: #5a23c8;\n      }\n      .bd-mode-toggle {\n        z-index: 1500;\n      }\n    " }} />
+
 
 
 <div>
@@ -31,33 +33,24 @@ export default function index() {
     </symbol>
   </svg>
   <div className="dropdown position-fixed bottom-0 end-0 mb-3 me-3 bd-mode-toggle">
-    <button className="btn btn-bd-primary py-2 dropdown-toggle d-flex align-items-center" id="bd-theme" type="button" aria-expanded="false" data-bs-toggle="dropdown" aria-label="Toggle theme (auto)">
-      <svg className="bi my-1 theme-icon-active" width="1em" height="1em"><use href="#circle-half" /></svg>
-      <span className="visually-hidden" id="bd-theme-text">Toggle theme</span>
-    </button>
-    <ul className="dropdown-menu dropdown-menu-end shadow" aria-labelledby="bd-theme-text">
-      <li>
-        <button type="button" className="dropdown-item d-flex align-items-center" data-bs-theme-value="light" aria-pressed="false">
-          <svg className="bi me-2 opacity-50 theme-icon" width="1em" height="1em"><use href="#sun-fill" /></svg>
-          Light
-          <svg className="bi ms-auto d-none" width="1em" height="1em"><use href="#check2" /></svg>
-        </button>
-      </li>
-      <li>
-        <button type="button" className="dropdown-item d-flex align-items-center" data-bs-theme-value="dark" aria-pressed="false">
-          <svg className="bi me-2 opacity-50 theme-icon" width="1em" height="1em"><use href="#moon-stars-fill" /></svg>
-          Dark
-          <svg className="bi ms-auto d-none" width="1em" height="1em"><use href="#check2" /></svg>
-        </button>
-      </li>
-      <li>
-        <button type="button" className="dropdown-item d-flex align-items-center active" data-bs-theme-value="auto" aria-pressed="true">
-          <svg className="bi me-2 opacity-50 theme-icon" width="1em" height="1em"><use href="#circle-half" /></svg>
-          Auto
-          <svg className="bi ms-auto d-none" width="1em" height="1em"><use href="#check2" /></svg>
-        </button>
-      </li>
-    </ul>
+  <Carousel activeIndex={index}
+              onSelect={handleSelect}
+              nextIcon={<span aria-hidden="true" className="carousel-control-next-icon changed" />}
+    >
+      {slides.map((slide) => (
+        <Carousel.Item key={slide.image} interval={slide.interval}>
+          <img
+            className="d-block w-100"
+            src={slide.image}
+            alt="First slide"
+          />
+          <Carousel.Caption>
+            <h3>{slide.title}</h3>
+            <p>{slide.subTitle}</p>
+          </Carousel.Caption>
+        </Carousel.Item>
+      ))}
+    </Carousel>
   </div>
 
 
@@ -84,7 +77,7 @@ export default function index() {
       <div className="container">
         <a href="#" className="navbar-brand d-flex align-items-center">
           <svg xmlns="http://www.w3.org/2000/svg" width={20} height={20} fill="none" stroke="currentColor" strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} aria-hidden="true" className="me-2" viewBox="0 0 24 24"><path d="M23 19a2 2 0 0 1-2 2H3a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h4l2-3h6l2 3h4a2 2 0 0 1 2 2z" /><circle cx={12} cy={13} r={4} /></svg>
-          <strong>Album</strong>
+          <strong>Fortune</strong>
         </a>
         <button className="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarHeader" aria-controls="navbarHeader" aria-expanded="false" aria-label="Toggle navigation">
           <span className="navbar-toggler-icon" />
@@ -95,18 +88,29 @@ export default function index() {
 
 
   <main>
-    <section className="py-5 text-center container">
-      <div className="row py-lg-5">
-        <div className="col-lg-6 col-md-8 mx-auto">
-          <h1 className="fw-light">Album example</h1>
-          <p className="lead text-body-secondary">Something short and leading about the collection below—its contents, the creator, etc. Make it short and sweet, but not too short so folks don’t simply skip over it entirely.</p>
-          <p>
-            <a href="#" className="btn btn-primary my-2">Main call to action</a>
-            <a href="#" className="btn btn-secondary my-2">Secondary action</a>
-          </p>
-        </div>
-      </div>
-    </section>
+<div id="carouselExampleFade" className="carousel slide carousel-fade">
+  <div className="carousel-inner">
+    <div className="carousel-item active">
+      <img src="/p1.jpg" className="d-block w-100" alt="jpg" />
+    </div>
+    <div className="carousel-item">
+      <img src="..." className="d-block w-100" alt="..." />
+    </div>
+    <div className="carousel-item">
+      <img src="..." className="d-block w-100" alt="..." />
+    </div>
+  </div>
+  <button className="carousel-control-prev" type="button" data-bs-target="#carouselExampleFade" data-bs-slide="prev">
+    <span className="carousel-control-prev-icon" aria-hidden="true" />
+    <span className="visually-hidden">Previous</span>
+  </button>
+  <button className="carousel-control-next" type="button" data-bs-target="#carouselExampleFade" data-bs-slide="next">
+    <span className="carousel-control-next-icon" aria-hidden="true" />
+    <span className="visually-hidden">Next</span>
+  </button>
+</div>
+
+
     <div className="album py-5 bg-body-tertiary">
       <div className="container">
         <div className="row row-cols-1 row-cols-sm-2 row-cols-md-3 g-3">
