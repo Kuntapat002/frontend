@@ -1,7 +1,7 @@
 import React from 'react'
 import Head from 'next/head'
 import Image from 'next/image';
-import './slider.css';
+import './img.css';
 
 
 export default function index() {
