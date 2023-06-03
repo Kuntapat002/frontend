@@ -14,37 +14,6 @@ export default function index() {
 <style dangerouslySetInnerHTML={{__html: "\n      .bd-placeholder-img {\n        font-size: 1.125rem;\n        text-anchor: middle;\n        -webkit-user-select: none;\n        -moz-user-select: none;\n        user-select: none;\n      }\n\n      @media (min-width: 768px) {\n        .bd-placeholder-img-lg {\n          font-size: 3.5rem;\n        }\n      }\n\n      .b-example-divider {\n        width: 100%;\n        height: 3rem;\n        background-color: rgba(0, 0, 0, .1);\n        border: solid rgba(0, 0, 0, .15);\n        border-width: 1px 0;\n        box-shadow: inset 0 .5em 1.5em rgba(0, 0, 0, .1), inset 0 .125em .5em rgba(0, 0, 0, .15);\n      }\n\n      .b-example-vr {\n        flex-shrink: 0;\n        width: 1.5rem;\n        height: 100vh;\n      }\n\n      .bi {\n        vertical-align: -.125em;\n        fill: currentColor;\n      }\n\n      .nav-scroller {\n        position: relative;\n        z-index: 2;\n        height: 2.75rem;\n        overflow-y: hidden;\n      }\n\n      .nav-scroller .nav {\n        display: flex;\n        flex-wrap: nowrap;\n        padding-bottom: 1rem;\n        margin-top: -1px;\n        overflow-x: auto;\n        text-align: center;\n        white-space: nowrap;\n        -webkit-overflow-scrolling: touch;\n      }\n\n      .btn-bd-primary {\n        --bd-violet-bg: #712cf9;\n        --bd-violet-rgb: 112.520718, 44.062154, 249.437846;\n\n        --bs-btn-font-weight: 600;\n        --bs-btn-color: var(--bs-white);\n        --bs-btn-bg: var(--bd-violet-bg);\n        --bs-btn-border-color: var(--bd-violet-bg);\n        --bs-btn-hover-color: var(--bs-white);\n        --bs-btn-hover-bg: #6528e0;\n        --bs-btn-hover-border-color: #6528e0;\n        --bs-btn-focus-shadow-rgb: var(--bd-violet-rgb);\n        --bs-btn-active-color: var(--bs-btn-hover-color);\n        --bs-btn-active-bg: #5a23c8;\n        --bs-btn-active-border-color: #5a23c8;\n      }\n      .bd-mode-toggle {\n        z-index: 1500;\n      }\n    " }} />
 
 
-
-    <header>
-    <nav class="navbar navbar-expand-lg bg-body-tertiary"> 
-  <div class="container-fluid">
-    <a class="navbar-brand" href="#">Kuntapat</a>
-    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
-      <span class="navbar-toggler-icon"></span>
-    </button>
-    <div class="collapse navbar-collapse" id="navbarNavDropdown">
-      <ul class="navbar-nav">
-        <li class="nav-item">
-          <a class="nav-link active" aria-current="page" href="#">Home</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link" href="#">About</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link" href="#">Contact</a>
-        </li>
-        <li class="nav-item dropdown">
-          <ul class="dropdown-menu">
-          </ul>
-        </li>
-      </ul>
-    </div>
-  </div>
-</nav>
-</header>
-
-
-
 <div>
   <svg xmlns="http://www.w3.org/2000/svg" style={{display: 'none'}}>
     <symbol id="check2" viewBox="0 0 16 16">
@@ -90,16 +59,18 @@ export default function index() {
       </li>
     </ul>
   </div>
+
+
   <header data-bs-theme="dark">
     <div className="collapse text-bg-dark" id="navbarHeader">
       <div className="container">
         <div className="row">
           <div className="col-sm-8 col-md-7 py-4">
-            <h4>About</h4>
+            <h4><a class="py-2 link-body-emphasis text-decoration-none" href="#">About</a></h4>
             <p className="text-body-secondary">Add some information about the album below, the author, or any other background context. Make it a few sentences long so folks can pick up some informative tidbits. Then, link them off to some social networking sites or contact information.</p>
           </div>
           <div className="col-sm-4 offset-md-1 py-4">
-            <h4>Contact</h4>
+            <h4><a class="py-2 link-body-emphasis text-decoration-none" href="#">Contact</a></h4>
             <ul className="list-unstyled">
               <li><a href="#" className="text-white">Follow on Twitter</a></li>
               <li><a href="#" className="text-white">Like on Facebook</a></li>
@@ -121,6 +92,8 @@ export default function index() {
       </div>
     </div>
   </header>
+
+
   <main>
     <section className="py-5 text-center container">
       <div className="row py-lg-5">
@@ -276,6 +249,8 @@ export default function index() {
       </div>
     </div>
   </main>
+
+  
   <footer className="text-body-secondary py-5">
     <div className="container">
       <p className="float-end mb-1">
