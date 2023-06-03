@@ -1,7 +1,6 @@
 import React from 'react'
 import Head from 'next/head'
 import Image from 'next/image';
-import './img.css';
 
 
 export default function index() {
@@ -33,24 +32,33 @@ export default function index() {
     </symbol>
   </svg>
   <div className="dropdown position-fixed bottom-0 end-0 mb-3 me-3 bd-mode-toggle">
-  <Carousel activeIndex={index}
-              onSelect={handleSelect}
-              nextIcon={<span aria-hidden="true" className="carousel-control-next-icon changed" />}
-    >
-      {slides.map((slide) => (
-        <Carousel.Item key={slide.image} interval={slide.interval}>
-          <img
-            className="d-block w-100"
-            src={slide.image}
-            alt="First slide"
-          />
-          <Carousel.Caption>
-            <h3>{slide.title}</h3>
-            <p>{slide.subTitle}</p>
-          </Carousel.Caption>
-        </Carousel.Item>
-      ))}
-    </Carousel>
+    <button className="btn btn-bd-primary py-2 dropdown-toggle d-flex align-items-center" id="bd-theme" type="button" aria-expanded="false" data-bs-toggle="dropdown" aria-label="Toggle theme (auto)">
+      <svg className="bi my-1 theme-icon-active" width="1em" height="1em"><use href="#circle-half" /></svg>
+      <span className="visually-hidden" id="bd-theme-text">Toggle theme</span>
+    </button>
+    <ul className="dropdown-menu dropdown-menu-end shadow" aria-labelledby="bd-theme-text">
+      <li>
+        <button type="button" className="dropdown-item d-flex align-items-center" data-bs-theme-value="light" aria-pressed="false">
+          <svg className="bi me-2 opacity-50 theme-icon" width="1em" height="1em"><use href="#sun-fill" /></svg>
+          Light
+          <svg className="bi ms-auto d-none" width="1em" height="1em"><use href="#check2" /></svg>
+        </button>
+      </li>
+      <li>
+        <button type="button" className="dropdown-item d-flex align-items-center" data-bs-theme-value="dark" aria-pressed="false">
+          <svg className="bi me-2 opacity-50 theme-icon" width="1em" height="1em"><use href="#moon-stars-fill" /></svg>
+          Dark
+          <svg className="bi ms-auto d-none" width="1em" height="1em"><use href="#check2" /></svg>
+        </button>
+      </li>
+      <li>
+        <button type="button" className="dropdown-item d-flex align-items-center active" data-bs-theme-value="auto" aria-pressed="true">
+          <svg className="bi me-2 opacity-50 theme-icon" width="1em" height="1em"><use href="#circle-half" /></svg>
+          Auto
+          <svg className="bi ms-auto d-none" width="1em" height="1em"><use href="#check2" /></svg>
+        </button>
+      </li>
+    </ul>
   </div>
 
 
@@ -77,7 +85,7 @@ export default function index() {
       <div className="container">
         <a href="#" className="navbar-brand d-flex align-items-center">
           <svg xmlns="http://www.w3.org/2000/svg" width={20} height={20} fill="none" stroke="currentColor" strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} aria-hidden="true" className="me-2" viewBox="0 0 24 24"><path d="M23 19a2 2 0 0 1-2 2H3a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h4l2-3h6l2 3h4a2 2 0 0 1 2 2z" /><circle cx={12} cy={13} r={4} /></svg>
-          <strong>Fortune</strong>
+          <strong>Fortune Express</strong>
         </a>
         <button className="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarHeader" aria-controls="navbarHeader" aria-expanded="false" aria-label="Toggle navigation">
           <span className="navbar-toggler-icon" />
@@ -90,14 +98,14 @@ export default function index() {
   <main>
 <div id="carouselExampleFade" className="carousel slide carousel-fade">
   <div className="carousel-inner">
-    <div className="carousel-item active">
+    <div className="carousel-item active" data-bs-interval="20000">
       <img src="/p1.jpg" className="d-block w-100" alt="jpg" />
     </div>
-    <div className="carousel-item">
-      <img src="..." className="d-block w-100" alt="..." />
+    <div className="carousel-item" data-bs-interval="20000">
+      <img src="/p2.jpg" className="d-block w-100" alt="jpg" />
     </div>
-    <div className="carousel-item">
-      <img src="..." className="d-block w-100" alt="..." />
+    <div className="carousel-item" data-bs-interval="20000">
+      <img src="/p3.jpg" className="d-block w-100" alt="jpg" />
     </div>
   </div>
   <button className="carousel-control-prev" type="button" data-bs-target="#carouselExampleFade" data-bs-slide="prev">
@@ -111,17 +119,24 @@ export default function index() {
 </div>
 
 
+
     <div className="album py-5 bg-body-tertiary">
       <div className="container">
         <div className="row row-cols-1 row-cols-sm-2 row-cols-md-3 g-3">
           <div className="col">
             <div className="card shadow-sm">
-              <svg className="bd-placeholder-img card-img-top" width="100%" height={225} xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder: Thumbnail" preserveAspectRatio="xMidYMid slice" focusable="false"><title>Placeholder</title><rect width="100%" height="100%" fill="#55595c" /><text x="50%" y="50%" fill="#eceeef" dy=".3em">Thumbnail</text></svg>
-              <div className="card-body">
-                <p className="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
+            <svg className="bd-placeholder-img card-img-top" width="100%" height={225} xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder: Thumbnail" preserveAspectRatio="xMidYMid slice" focusable="false">
+            <title>Placeholder</title>
+            <rect width="100%" height="100%" fill="#55595c" />
+            <image xlinkHref="p4.jpg" width="100%" height="100%" />
+            </svg>
+
+
+            <div className="card-body">
+                <p className="card-text">Hideaki Anno is a Japanese anime director and actor. His best known work is the anime series Evangelion ,shin godzilla and shin ultraman.</p>
                 <div className="d-flex justify-content-between align-items-center">
                   <div className="btn-group">
-                    <button type="button" className="btn btn-sm btn-outline-secondary">View</button>
+                    <a href="https://en.wikipedia.org/wiki/Hideaki_Anno" className="btn btn-sm btn-outline-secondary" target="_blank" rel="noopener noreferrer">View</a>
                     <button type="button" className="btn btn-sm btn-outline-secondary">Edit</button>
                   </div>
                   <small className="text-body-secondary">9 mins</small>
@@ -131,12 +146,18 @@ export default function index() {
           </div>
           <div className="col">
             <div className="card shadow-sm">
-              <svg className="bd-placeholder-img card-img-top" width="100%" height={225} xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder: Thumbnail" preserveAspectRatio="xMidYMid slice" focusable="false"><title>Placeholder</title><rect width="100%" height="100%" fill="#55595c" /><text x="50%" y="50%" fill="#eceeef" dy=".3em">Thumbnail</text></svg>
+            <svg className="bd-placeholder-img card-img-top" width="100%" height={225} xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder: Thumbnail" preserveAspectRatio="xMidYMid slice" focusable="false">
+            <title>Placeholder</title>
+            <rect width="100%" height="100%" fill="#55595c" />
+            <image xlinkHref="p5.jpg" width="100%" height="100%" />
+            </svg>
+
+
               <div className="card-body">
-                <p className="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
+                <p className="card-text">Shin Kamen Rider is the 50th anniversary film of the Kamen Rider series and the third film in the Shin film series directed by Hideaki Anno.</p>
                 <div className="d-flex justify-content-between align-items-center">
                   <div className="btn-group">
-                    <button type="button" className="btn btn-sm btn-outline-secondary">View</button>
+                    <a href="https://www.youtube.com/watch?v=qwo4fFji8rc&t=" className="btn btn-sm btn-outline-secondary" target="_blank" rel="noopener noreferrer">View</a>
                     <button type="button" className="btn btn-sm btn-outline-secondary">Edit</button>
                   </div>
                   <small className="text-body-secondary">9 mins</small>
@@ -146,12 +167,18 @@ export default function index() {
           </div>
           <div className="col">
             <div className="card shadow-sm">
-              <svg className="bd-placeholder-img card-img-top" width="100%" height={225} xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder: Thumbnail" preserveAspectRatio="xMidYMid slice" focusable="false"><title>Placeholder</title><rect width="100%" height="100%" fill="#55595c" /><text x="50%" y="50%" fill="#eceeef" dy=".3em">Thumbnail</text></svg>
-              <div className="card-body">
-                <p className="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
+            <svg className="bd-placeholder-img card-img-top" width="100%" height={225} xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder: Thumbnail" preserveAspectRatio="xMidYMid slice" focusable="false">
+            <title>Placeholder</title>
+            <rect width="100%" height="100%" fill="#55595c" />
+            <image xlinkHref="p5A.jpg" width="100%" height="100%" />
+            </svg>              
+            
+
+            <div className="card-body">
+                <p className="card-text">Director Anno "Today I'm the moderator", Sosuke Ikematsu "It's hard to do..." Movie "Shin Kamen Rider" blockbuster thank you stage greeting.</p>
                 <div className="d-flex justify-content-between align-items-center">
                   <div className="btn-group">
-                    <button type="button" className="btn btn-sm btn-outline-secondary">View</button>
+                    <a href="https://www.youtube.com/watch?v=xQsywK2oew4" className="btn btn-sm btn-outline-secondary" target="_blank" rel="noopener noreferrer">View</a>
                     <button type="button" className="btn btn-sm btn-outline-secondary">Edit</button>
                   </div>
                   <small className="text-body-secondary">9 mins</small>
@@ -161,12 +188,18 @@ export default function index() {
           </div>
           <div className="col">
             <div className="card shadow-sm">
-              <svg className="bd-placeholder-img card-img-top" width="100%" height={225} xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder: Thumbnail" preserveAspectRatio="xMidYMid slice" focusable="false"><title>Placeholder</title><rect width="100%" height="100%" fill="#55595c" /><text x="50%" y="50%" fill="#eceeef" dy=".3em">Thumbnail</text></svg>
-              <div className="card-body">
-                <p className="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
+            <svg className="bd-placeholder-img card-img-top" width="100%" height={225} xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder: Thumbnail" preserveAspectRatio="xMidYMid slice" focusable="false">
+            <title>Placeholder</title>
+            <rect width="100%" height="100%" fill="#55595c" />
+            <image xlinkHref="p7.jpg" width="100%" height="100%" />
+            </svg>              
+            
+
+            <div className="card-body">
+                <p className="card-text">Shin Ultraman commemorates the 55th anniversary of the Ultraman series. It is a remake of the original Ultraman series 1966 by Shinji Higuchi.</p>
                 <div className="d-flex justify-content-between align-items-center">
                   <div className="btn-group">
-                    <button type="button" className="btn btn-sm btn-outline-secondary">View</button>
+                    <a href="https://www.youtube.com/watch?v=2XK23KGM-eA" className="btn btn-sm btn-outline-secondary" target="_blank" rel="noopener noreferrer">View</a>
                     <button type="button" className="btn btn-sm btn-outline-secondary">Edit</button>
                   </div>
                   <small className="text-body-secondary">9 mins</small>
@@ -176,12 +209,18 @@ export default function index() {
           </div>
           <div className="col">
             <div className="card shadow-sm">
-              <svg className="bd-placeholder-img card-img-top" width="100%" height={225} xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder: Thumbnail" preserveAspectRatio="xMidYMid slice" focusable="false"><title>Placeholder</title><rect width="100%" height="100%" fill="#55595c" /><text x="50%" y="50%" fill="#eceeef" dy=".3em">Thumbnail</text></svg>
-              <div className="card-body">
-                <p className="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
+            <svg className="bd-placeholder-img card-img-top" width="100%" height={225} xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder: Thumbnail" preserveAspectRatio="xMidYMid slice" focusable="false">
+            <title>Placeholder</title>
+            <rect width="100%" height="100%" fill="#55595c" />
+            <image xlinkHref="p8.jpg" width="100%" height="100%" />
+            </svg>              
+            
+            
+            <div className="card-body">
+                <p className="card-text">Special program to commemorate the release of the movie "Shin Ultraman" [currently showing a blockbuster]</p>
                 <div className="d-flex justify-content-between align-items-center">
                   <div className="btn-group">
-                    <button type="button" className="btn btn-sm btn-outline-secondary">View</button>
+                    <a href="https://www.youtube.com/watch?v=MDZ_TljRi1s" className="btn btn-sm btn-outline-secondary" target="_blank" rel="noopener noreferrer">View</a>
                     <button type="button" className="btn btn-sm btn-outline-secondary">Edit</button>
                   </div>
                   <small className="text-body-secondary">9 mins</small>
@@ -191,12 +230,18 @@ export default function index() {
           </div>
           <div className="col">
             <div className="card shadow-sm">
-              <svg className="bd-placeholder-img card-img-top" width="100%" height={225} xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder: Thumbnail" preserveAspectRatio="xMidYMid slice" focusable="false"><title>Placeholder</title><rect width="100%" height="100%" fill="#55595c" /><text x="50%" y="50%" fill="#eceeef" dy=".3em">Thumbnail</text></svg>
-              <div className="card-body">
-                <p className="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
+            <svg className="bd-placeholder-img card-img-top" width="100%" height={225} xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder: Thumbnail" preserveAspectRatio="xMidYMid slice" focusable="false">
+            <title>Placeholder</title>
+            <rect width="100%" height="100%" fill="#55595c" />
+            <image xlinkHref="p9.jpg" width="100%" height="100%" />
+            </svg>              
+            
+            
+            <div className="card-body">
+                <p className="card-text">Evangelion: 3.0+1.0 is the fourth installment of the anime series. Rebuild of Evangelion of director Hideaki Anno.</p>
                 <div className="d-flex justify-content-between align-items-center">
                   <div className="btn-group">
-                    <button type="button" className="btn btn-sm btn-outline-secondary">View</button>
+                    <a href="https://www.youtube.com/watch?v=10ict3GCxGY" className="btn btn-sm btn-outline-secondary" target="_blank" rel="noopener noreferrer">View</a>
                     <button type="button" className="btn btn-sm btn-outline-secondary">Edit</button>
                   </div>
                   <small className="text-body-secondary">9 mins</small>
@@ -206,12 +251,18 @@ export default function index() {
           </div>
           <div className="col">
             <div className="card shadow-sm">
-              <svg className="bd-placeholder-img card-img-top" width="100%" height={225} xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder: Thumbnail" preserveAspectRatio="xMidYMid slice" focusable="false"><title>Placeholder</title><rect width="100%" height="100%" fill="#55595c" /><text x="50%" y="50%" fill="#eceeef" dy=".3em">Thumbnail</text></svg>
-              <div className="card-body">
-                <p className="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
+            <svg className="bd-placeholder-img card-img-top" width="100%" height={225} xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder: Thumbnail" preserveAspectRatio="xMidYMid slice" focusable="false">
+            <title>Placeholder</title>
+            <rect width="100%" height="100%" fill="#55595c" />
+            <image xlinkHref="p10.jpg" width="100%" height="100%" />
+            </svg>              
+            
+            
+            <div className="card-body">
+                <p className="card-text">Hideaki Anno, general director, "Eva" first stage greetings Relief and gratitude for the completion of the new movie version Standing alone...</p>
                 <div className="d-flex justify-content-between align-items-center">
                   <div className="btn-group">
-                    <button type="button" className="btn btn-sm btn-outline-secondary">View</button>
+                    <a href="https://www.youtube.com/watch?v=H8iw8QBjX1I" className="btn btn-sm btn-outline-secondary" target="_blank" rel="noopener noreferrer">View</a>
                     <button type="button" className="btn btn-sm btn-outline-secondary">Edit</button>
                   </div>
                   <small className="text-body-secondary">9 mins</small>
@@ -221,12 +272,18 @@ export default function index() {
           </div>
           <div className="col">
             <div className="card shadow-sm">
-              <svg className="bd-placeholder-img card-img-top" width="100%" height={225} xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder: Thumbnail" preserveAspectRatio="xMidYMid slice" focusable="false"><title>Placeholder</title><rect width="100%" height="100%" fill="#55595c" /><text x="50%" y="50%" fill="#eceeef" dy=".3em">Thumbnail</text></svg>
-              <div className="card-body">
-                <p className="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
+            <svg className="bd-placeholder-img card-img-top" width="100%" height={225} xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder: Thumbnail" preserveAspectRatio="xMidYMid slice" focusable="false">
+            <title>Placeholder</title>
+            <rect width="100%" height="100%" fill="#55595c" />
+            <image xlinkHref="p11.png" width="100%" height="100%" />
+            </svg>              
+            
+            
+            <div className="card-body">
+                <p className="card-text">Shin Godzilla is a Japanese monster science fiction film. In the Godzilla movie series and a movie based on the Japanese monster movie of the same name.</p>
                 <div className="d-flex justify-content-between align-items-center">
                   <div className="btn-group">
-                    <button type="button" className="btn btn-sm btn-outline-secondary">View</button>
+                    <a href="https://www.youtube.com/watch?v=ysRIwlEBjuw" className="btn btn-sm btn-outline-secondary" target="_blank" rel="noopener noreferrer">View</a>
                     <button type="button" className="btn btn-sm btn-outline-secondary">Edit</button>
                   </div>
                   <small className="text-body-secondary">9 mins</small>
@@ -236,12 +293,18 @@ export default function index() {
           </div>
           <div className="col">
             <div className="card shadow-sm">
-              <svg className="bd-placeholder-img card-img-top" width="100%" height={225} xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder: Thumbnail" preserveAspectRatio="xMidYMid slice" focusable="false"><title>Placeholder</title><rect width="100%" height="100%" fill="#55595c" /><text x="50%" y="50%" fill="#eceeef" dy=".3em">Thumbnail</text></svg>
-              <div className="card-body">
-                <p className="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
+            <svg className="bd-placeholder-img card-img-top" width="100%" height={225} xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder: Thumbnail" preserveAspectRatio="xMidYMid slice" focusable="false">
+            <title>Placeholder</title>
+            <rect width="100%" height="100%" fill="#55595c" />
+            <image xlinkHref="p12.jpg" width="100%" height="100%" />
+            </svg>              
+            
+            
+            <div className="card-body">
+                <p className="card-text">Higuchi Shinji, Known for his tokusatsu blockbusters, Higuchi is considered a leading Japanese filmmaker of the 21st century.</p>
                 <div className="d-flex justify-content-between align-items-center">
                   <div className="btn-group">
-                    <button type="button" className="btn btn-sm btn-outline-secondary">View</button>
+                    <a href="https://www.youtube.com/watch?v=b_PTqr3NKWo" className="btn btn-sm btn-outline-secondary" target="_blank" rel="noopener noreferrer">View</a>
                     <button type="button" className="btn btn-sm btn-outline-secondary">Edit</button>
                   </div>
                   <small className="text-body-secondary">9 mins</small>
