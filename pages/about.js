@@ -18,11 +18,11 @@ export default function index() {
       <div className="container">
         <div className="row">
           <div className="col-sm-8 col-md-7 py-4">
-            <h4><a class="py-2 link-body-emphasis " href="/.about">About</a></h4>
+            <h4><a class="py-2 link-body-emphasis " href="/about">About</a></h4>
             <p className="text-body-secondary">Add some information about the album below, the author, or any other background context. Make it a few sentences long so folks can pick up some informative tidbits. Then, link them off to some social networking sites or contact information.</p>
           </div>
           <div className="col-sm-4 offset-md-1 py-4">
-            <h4><a class="py-2 link-body-emphasis text-decoration-none" href="/.contact">Contact</a></h4>
+            <h4><a class="py-2 link-body-emphasis text-decoration-none" href="/contact">Contact</a></h4>
             <ul className="list-unstyled">
               <li><a href="#" className="text-white">Follow on Twitter</a></li>
               <li><a href="#" className="text-white">Like on Facebook</a></li>
@@ -34,8 +34,8 @@ export default function index() {
     </div>
     <div className="navbar navbar-dark bg-dark shadow-sm">
       <div className="container">
-        <a href="#" className="navbar-brand d-flex align-items-center">
-          <svg xmlns="http://www.w3.org/2000/svg" width={20} height={20} fill="none" stroke="currentColor" strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} aria-hidden="true" className="me-2" viewBox="0 0 24 24"><path d="M23 19a2 2 0 0 1-2 2H3a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h4l2-3h6l2 3h4a2 2 0 0 1 2 2z" /><circle cx={12} cy={13} r={4} /></svg>
+        <a href="" className="navbar-brand d-flex align-items-center">
+          <svg xmlns="index" width={20} height={20} fill="none" stroke="currentColor" strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} aria-hidden="true" className="me-2" viewBox="0 0 24 24"><path d="M23 19a2 2 0 0 1-2 2H3a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h4l2-3h6l2 3h4a2 2 0 0 1 2 2z" /><circle cx={12} cy={13} r={4} /></svg>
           <strong>Fortune Express</strong>
         </a>
         <button className="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarHeader" aria-controls="navbarHeader" aria-expanded="false" aria-label="Toggle navigation">
@@ -46,227 +46,44 @@ export default function index() {
   </header>
 
 
-  <main>
-<div id="carouselExampleFade" className="carousel slide carousel-fade">
-  <div className="carousel-inner">
-    <div className="carousel-item active" data-bs-interval="20000">
-      <img src="/p1.jpg" className="d-block w-100" alt="jpg" />
+<main>
+  <div className="container py-4">
+    <div className="p-5 mb-4 text-bg-dark rounded-3" style={{ backgroundImage: 'url("#")' }}>
+      <div className="container-fluid py-5">
+        <h1 className="display-5 fw-bold">About Me</h1>
+        <p className="col-md-8 fs-4">Hi, I'm Kuntapat wongvichit This is my resume for you to know me better I'm studying at Chiang Mai Technical College and I have a passion for design.</p>
+        
+        <div className="btn-group"> 
+        <a href="https://www.canva.com/design/DAFQq1dmX8w/bDpEPJfQ9lc6mM0ocU84rA/edit?utm_content=DAFQq1dmX8w&utm_campaign=designshare&utm_medium=link2&utm_source=sharebutton" className="btn btn-primary btn-lg" target="_blank" rel="noopener noreferrer">Learn more about me</a>
+        </div>
+      
+      </div>
     </div>
-    <div className="carousel-item" data-bs-interval="20000">
-      <img src="/p2.jpg" className="d-block w-100" alt="jpg" />
-    </div>
-    <div className="carousel-item" data-bs-interval="20000">
-      <img src="/p3.jpg" className="d-block w-100" alt="jpg" />
-    </div>
-  </div>
-  <button className="carousel-control-prev" type="button" data-bs-target="#carouselExampleFade" data-bs-slide="prev">
-    <span className="carousel-control-prev-icon" aria-hidden="true" />
-    <span className="visually-hidden">Previous</span>
-  </button>
-  <button className="carousel-control-next" type="button" data-bs-target="#carouselExampleFade" data-bs-slide="next">
-    <span className="carousel-control-next-icon" aria-hidden="true" />
-    <span className="visually-hidden">Next</span>
-  </button>
-</div>
 
 
-
-    <div className="album py-5 bg-body-tertiary">
-      <div className="container">
-        <div className="row row-cols-1 row-cols-sm-2 row-cols-md-3 g-3">
-          <div className="col">
-            <div className="card shadow-sm">
-            <svg className="bd-placeholder-img card-img-top" width="100%" height={225} xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder: Thumbnail" preserveAspectRatio="xMidYMid slice" focusable="false">
-            <title>Placeholder</title>
-            <rect width="100%" height="100%" fill="#55595c" />
-            <image xlinkHref="p4.jpg" width="100%" height="100%" />
-            </svg>
+    <div className="row align-items-md-stretch">
+      <div className="col-md-6">
+        <div className="h-100 p-5 text-bg-dark rounded-3" style={{ backgroundImage: 'url("#")' }}>
+          <h2>Academic information</h2>
+          <p>I received a certificate Thai Mooc project online learning Graphic Design Crash Course and Japanese Language for Being Elderly Caregiver.</p>
+          <a href="https://www.canva.com/design/DAFQq1dmX8w/bDpEPJfQ9lc6mM0ocU84rA/edit?utm_content=DAFQq1dmX8w&utm_campaign=designshare&utm_medium=link2&utm_source=sharebutton" className="btn btn-outline-light" target="_blank" rel="noopener noreferrer">Take a look</a>
+        </div>
+      </div>
 
 
-            <div className="card-body">
-                <p className="card-text">Hideaki Anno is a Japanese anime director and actor. His best known work is the anime series Evangelion ,shin godzilla and shin ultraman.</p>
-                <div className="d-flex justify-content-between align-items-center">
-                  <div className="btn-group">
-                    <a href="https://en.wikipedia.org/wiki/Hideaki_Anno" className="btn btn-sm btn-outline-secondary" target="_blank" rel="noopener noreferrer">View</a>
-                    <button type="button" className="btn btn-sm btn-outline-secondary">Edit</button>
-                  </div>
-                  <small className="text-body-secondary">9 mins</small>
-                </div>
-              </div>
-            </div>
-          </div>
-          <div className="col">
-            <div className="card shadow-sm">
-            <svg className="bd-placeholder-img card-img-top" width="100%" height={225} xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder: Thumbnail" preserveAspectRatio="xMidYMid slice" focusable="false">
-            <title>Placeholder</title>
-            <rect width="100%" height="100%" fill="#55595c" />
-            <image xlinkHref="p5.jpg" width="100%" height="100%" />
-            </svg>
-
-
-              <div className="card-body">
-                <p className="card-text">Shin Kamen Rider is the 50th anniversary film of the Kamen Rider series and the third film in the Shin film series directed by Hideaki Anno.</p>
-                <div className="d-flex justify-content-between align-items-center">
-                  <div className="btn-group">
-                    <a href="https://www.youtube.com/watch?v=qwo4fFji8rc&t=" className="btn btn-sm btn-outline-secondary" target="_blank" rel="noopener noreferrer">View</a>
-                    <button type="button" className="btn btn-sm btn-outline-secondary">Edit</button>
-                  </div>
-                  <small className="text-body-secondary">9 mins</small>
-                </div>
-              </div>
-            </div>
-          </div>
-          <div className="col">
-            <div className="card shadow-sm">
-            <svg className="bd-placeholder-img card-img-top" width="100%" height={225} xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder: Thumbnail" preserveAspectRatio="xMidYMid slice" focusable="false">
-            <title>Placeholder</title>
-            <rect width="100%" height="100%" fill="#55595c" />
-            <image xlinkHref="p5A.jpg" width="100%" height="100%" />
-            </svg>              
-            
-
-            <div className="card-body">
-                <p className="card-text">Director Anno "Today I'm the moderator", Sosuke Ikematsu "It's hard to do..." Movie "Shin Kamen Rider" blockbuster thank you stage greeting.</p>
-                <div className="d-flex justify-content-between align-items-center">
-                  <div className="btn-group">
-                    <a href="https://www.youtube.com/watch?v=xQsywK2oew4" className="btn btn-sm btn-outline-secondary" target="_blank" rel="noopener noreferrer">View</a>
-                    <button type="button" className="btn btn-sm btn-outline-secondary">Edit</button>
-                  </div>
-                  <small className="text-body-secondary">9 mins</small>
-                </div>
-              </div>
-            </div>
-          </div>
-          <div className="col">
-            <div className="card shadow-sm">
-            <svg className="bd-placeholder-img card-img-top" width="100%" height={225} xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder: Thumbnail" preserveAspectRatio="xMidYMid slice" focusable="false">
-            <title>Placeholder</title>
-            <rect width="100%" height="100%" fill="#55595c" />
-            <image xlinkHref="p7.jpg" width="100%" height="100%" />
-            </svg>              
-            
-
-            <div className="card-body">
-                <p className="card-text">Shin Ultraman commemorates the 55th anniversary of the Ultraman series. It is a remake of the original Ultraman series 1966 by Shinji Higuchi.</p>
-                <div className="d-flex justify-content-between align-items-center">
-                  <div className="btn-group">
-                    <a href="https://www.youtube.com/watch?v=2XK23KGM-eA" className="btn btn-sm btn-outline-secondary" target="_blank" rel="noopener noreferrer">View</a>
-                    <button type="button" className="btn btn-sm btn-outline-secondary">Edit</button>
-                  </div>
-                  <small className="text-body-secondary">9 mins</small>
-                </div>
-              </div>
-            </div>
-          </div>
-          <div className="col">
-            <div className="card shadow-sm">
-            <svg className="bd-placeholder-img card-img-top" width="100%" height={225} xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder: Thumbnail" preserveAspectRatio="xMidYMid slice" focusable="false">
-            <title>Placeholder</title>
-            <rect width="100%" height="100%" fill="#55595c" />
-            <image xlinkHref="p8.jpg" width="100%" height="100%" />
-            </svg>              
-            
-            
-            <div className="card-body">
-                <p className="card-text">Special program to commemorate the release of the movie "Shin Ultraman" [currently showing a blockbuster]</p>
-                <div className="d-flex justify-content-between align-items-center">
-                  <div className="btn-group">
-                    <a href="https://www.youtube.com/watch?v=MDZ_TljRi1s" className="btn btn-sm btn-outline-secondary" target="_blank" rel="noopener noreferrer">View</a>
-                    <button type="button" className="btn btn-sm btn-outline-secondary">Edit</button>
-                  </div>
-                  <small className="text-body-secondary">9 mins</small>
-                </div>
-              </div>
-            </div>
-          </div>
-          <div className="col">
-            <div className="card shadow-sm">
-            <svg className="bd-placeholder-img card-img-top" width="100%" height={225} xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder: Thumbnail" preserveAspectRatio="xMidYMid slice" focusable="false">
-            <title>Placeholder</title>
-            <rect width="100%" height="100%" fill="#55595c" />
-            <image xlinkHref="p9.jpg" width="100%" height="100%" />
-            </svg>              
-            
-            
-            <div className="card-body">
-                <p className="card-text">Evangelion: 3.0+1.0 is the fourth installment of the anime series. Rebuild of Evangelion of director Hideaki Anno.</p>
-                <div className="d-flex justify-content-between align-items-center">
-                  <div className="btn-group">
-                    <a href="https://www.youtube.com/watch?v=10ict3GCxGY" className="btn btn-sm btn-outline-secondary" target="_blank" rel="noopener noreferrer">View</a>
-                    <button type="button" className="btn btn-sm btn-outline-secondary">Edit</button>
-                  </div>
-                  <small className="text-body-secondary">9 mins</small>
-                </div>
-              </div>
-            </div>
-          </div>
-          <div className="col">
-            <div className="card shadow-sm">
-            <svg className="bd-placeholder-img card-img-top" width="100%" height={225} xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder: Thumbnail" preserveAspectRatio="xMidYMid slice" focusable="false">
-            <title>Placeholder</title>
-            <rect width="100%" height="100%" fill="#55595c" />
-            <image xlinkHref="p10.jpg" width="100%" height="100%" />
-            </svg>              
-            
-            
-            <div className="card-body">
-                <p className="card-text">Hideaki Anno, general director, "Eva" first stage greetings Relief and gratitude for the completion of the new movie version Standing alone...</p>
-                <div className="d-flex justify-content-between align-items-center">
-                  <div className="btn-group">
-                    <a href="https://www.youtube.com/watch?v=H8iw8QBjX1I" className="btn btn-sm btn-outline-secondary" target="_blank" rel="noopener noreferrer">View</a>
-                    <button type="button" className="btn btn-sm btn-outline-secondary">Edit</button>
-                  </div>
-                  <small className="text-body-secondary">9 mins</small>
-                </div>
-              </div>
-            </div>
-          </div>
-          <div className="col">
-            <div className="card shadow-sm">
-            <svg className="bd-placeholder-img card-img-top" width="100%" height={225} xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder: Thumbnail" preserveAspectRatio="xMidYMid slice" focusable="false">
-            <title>Placeholder</title>
-            <rect width="100%" height="100%" fill="#55595c" />
-            <image xlinkHref="p11.png" width="100%" height="100%" />
-            </svg>              
-            
-            
-            <div className="card-body">
-                <p className="card-text">Shin Godzilla is a Japanese monster science fiction film. In the Godzilla movie series and a movie based on the Japanese monster movie of the same name.</p>
-                <div className="d-flex justify-content-between align-items-center">
-                  <div className="btn-group">
-                    <a href="https://www.youtube.com/watch?v=ysRIwlEBjuw" className="btn btn-sm btn-outline-secondary" target="_blank" rel="noopener noreferrer">View</a>
-                    <button type="button" className="btn btn-sm btn-outline-secondary">Edit</button>
-                  </div>
-                  <small className="text-body-secondary">9 mins</small>
-                </div>
-              </div>
-            </div>
-          </div>
-          <div className="col">
-            <div className="card shadow-sm">
-            <svg className="bd-placeholder-img card-img-top" width="100%" height={225} xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder: Thumbnail" preserveAspectRatio="xMidYMid slice" focusable="false">
-            <title>Placeholder</title>
-            <rect width="100%" height="100%" fill="#55595c" />
-            <image xlinkHref="p12.jpg" width="100%" height="100%" />
-            </svg>              
-            
-            
-            <div className="card-body">
-                <p className="card-text">Higuchi Shinji, Known for his tokusatsu blockbusters, Higuchi is considered a leading Japanese filmmaker of the 21st century.</p>
-                <div className="d-flex justify-content-between align-items-center">
-                  <div className="btn-group">
-                    <a href="https://www.youtube.com/watch?v=b_PTqr3NKWo" className="btn btn-sm btn-outline-secondary" target="_blank" rel="noopener noreferrer">View</a>
-                    <button type="button" className="btn btn-sm btn-outline-secondary">Edit</button>
-                  </div>
-                  <small className="text-body-secondary">9 mins</small>
-                </div>
-              </div>
-            </div>
-          </div>
+      <div className="col-md-6">
+        <div className="h-100 p-5 text-bg-dark border rounded-3" style={{ backgroundImage: 'url("#")' }}>
+          <h2>Thank you</h2>
+          <p>Thank you teachers for giving advice. in collecting documents, evidence and information In creating this portfolio (Portfolio) to be successful and thank you parents who has kindly assisted in the preparation of several documents and recommendations until the collection file This work is more complete.</p>
         </div>
       </div>
     </div>
-  </main>
+    <footer className="pt-3 mt-4 text-body-secondary border-top">
+      © 2023
+    </footer>
+  </div>
+</main>
+
 
   
   <footer className="text-decoration-none ">
