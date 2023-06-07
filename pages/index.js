@@ -18,11 +18,11 @@ export default function index() {
       <div className="container">
         <div className="row">
           <div className="col-sm-8 col-md-7 py-4">
-            <h4><a class="py-2 link-body-emphasis " href="about">About</a></h4>
+            <h4><link class="py-2 link-body-emphasis " href="about">About</link></h4>
             <p className="text-body-secondary">Add some information about the album below, the author, or any other background context. Make it a few sentences long so folks can pick up some informative tidbits. Then, link them off to some social networking sites or contact information.</p>
           </div>
           <div className="col-sm-4 offset-md-1 py-4">
-            <h4><a class="py-2 link-body-emphasis text-decoration-none" href="contact">Contact</a></h4>
+            <h4><link class="py-2 link-body-emphasis text-decoration-none" href="contact">Contact</link></h4>
             <ul className="list-unstyled">
               <li><a href="#" className="text-white">Follow on Twitter</a></li>
               <li><a href="#" className="text-white">Like on Facebook</a></li>
