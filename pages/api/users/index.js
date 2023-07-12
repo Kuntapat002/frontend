@@ -11,7 +11,7 @@ const connection = mysql.createConnection({
   
   export default function handler(req, res) {
 
-    const { firstname, lastname, username, password, status} = req.body
+    const { studentid, firstname, lastname, username, password, status} = req.body
 
   if (req.method === 'GET') {
 
@@ -32,7 +32,7 @@ const connection = mysql.createConnection({
     
     try{
     const result = connection.query("INSERT INTO tbl_users SET ?",{
-      firstname, lastname, username, password, status
+      studentid, firstname, lastname, username, password, status
     });
 
     return res.status(200).json({ ...req.body, id: result.insertId});
