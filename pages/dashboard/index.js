@@ -1,4 +1,7 @@
 import { useSession, signIn, signOut } from "next-auth/react";
+import Link from "next/link";
+import { useRouter } from "next/router";
+import Swal from 'sweetalert2';
 
 export async function getStaticProps() {
   const res = await fetch('http://localhost:3000/api/users');
@@ -11,25 +14,53 @@ export async function getStaticProps() {
   };
 }
 
+
 export default function Component({ posts }) {
   const { data: session } = useSession();
+  const router = useRouter();
+
+  const handleDelete = async (id) => {
+    const result = await Swal.fire({
+      title: 'Are you sure?',
+      text: "You won't be able to revert this!",
+      icon: 'warning',
+      showCancelButton: true,
+      confirmButtonColor: '#3085d6',
+      cancelButtonColor: '#d33',
+      confirmButtonText: 'Yes, delete it!'
+    });
+  
+    if (result.isConfirmed) {
+      // Perform the deletion using fetch
+      await fetch('http://localhost:3000/api/users?id=' + id, {
+        method: 'DELETE',
+      });
+  
+      // Reload the page
+      router.reload('/dashboard');
+  
+      // Show success message
+      Swal.fire(
+        'Deleted!',
+        'Your file has been deleted.',
+        'success'
+      );
+    }
+  };
 
   if (session) {
     return (
       <>
         <nav className="navbar navbar-expand-lg navbar-light bg-light">
           <div className="container">
-            <a className="navbar-brand" href="/">My App</a>
+            <a className="navbar-brand" href="/">Fortune Express</a>
             <button className="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
               <span className="navbar-toggler-icon"></span>
             </button>
             <div className="collapse navbar-collapse" id="navbarNav">
               <ul className="navbar-nav">
                 <li className="nav-item">
-                  <a className="nav-link" href="/">Home</a>
-                </li>
-                <li className="nav-item">
-                  <a className="nav-link" href="/about">About</a>
+                  <Link className="nav-link" href="./">Home</Link>
                 </li>
               </ul>
               <div className="navbar-text ms-auto">
@@ -44,9 +75,12 @@ export default function Component({ posts }) {
         
         <div className="container mt-5">
           <div className="card mt-4">
-            <div className="card-body">
+          <div className="card-header">
               <h5>Member List</h5>
-              <div align="center"><button className="btn btn-success text-n">Add Data</button></div>
+            </div>
+            <div className="card-body">
+              <Link href="./dashboard/adddata"><button className="btn btn-success text-n mb-2">Add Data</button></Link>
+
               <table className="table table-bordered">
                 <thead>
                   <tr>
@@ -124,4 +158,5 @@ export default function Component({ posts }) {
       </div>
     </>
   );
+  
 }

@@ -28,6 +28,7 @@ export default function index() {
               <li><a href="#" className="text-white">Follow on Twitter</a></li>
               <li><a href="#" className="text-white">Like on Facebook</a></li>
               <li><a href="#" className="text-white">Email me</a></li>
+              <li><Link href="./dashboard" className="text-white">User Data</Link></li>
             </ul>
           </div>
         </div>

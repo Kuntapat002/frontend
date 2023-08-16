@@ -32,11 +32,15 @@ const connection = mysql.createConnection({
     
     try{
     const result = connection.query("INSERT INTO tbl_users SET ?",{
-      studentid, firstname, lastname, username, password, status
+      studentid, 
+      firstname, 
+      lastname, 
+      username, 
+      password, 
+      status
     });
 
-    return res.status(200).json({ ...req.body, id: result.insertId});
-
+    return res.status(200).json({ "status": "ok", "message": req.body, id: result.insertId});
   } catch (error){
     return res.status(500).json({ message: error.message });
   }
