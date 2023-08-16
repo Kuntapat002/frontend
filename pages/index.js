@@ -52,13 +52,13 @@ export default function index() {
 <div id="carouselExampleFade" className="carousel slide carousel-fade">
   <div className="carousel-inner">
     <div className="carousel-item active" data-bs-interval="20000">
-      <img src="/p1.jpg" className="d-block w-100" alt="jpg" />
+      <Image src="/p1.jpg" className="d-block w-100" alt="jpg" />
     </div>
     <div className="carousel-item" data-bs-interval="20000">
-      <img src="/p2.jpg" className="d-block w-100" alt="jpg" />
+      <Image src="/p2.jpg" className="d-block w-100" alt="jpg" />
     </div>
     <div className="carousel-item" data-bs-interval="20000">
-      <img src="/p3.jpg" className="d-block w-100" alt="jpg" />
+      <Image src="/p3.jpg" className="d-block w-100" alt="jpg" />
     </div>
   </div>
   <button className="carousel-control-prev" type="button" data-bs-target="#carouselExampleFade" data-bs-slide="prev">
