@@ -2,17 +2,6 @@ import { useRouter } from "next/router";
 import { useSession, signIn, signOut } from "next-auth/react";
 import Link from "next/link";
 
-export async function getStaticProps() {
-  const res = await fetch('http://localhost:3000/api/users');
-  const posts = await res.json();
-
-  return {
-    props: {
-      posts,
-    },
-  };
-}
-
 export default function Component({ posts }) {
   const { data: session } = useSession();
   const router = useRouter();
@@ -38,7 +27,7 @@ const handleSubmit = (event) => {
     // console.log("password", jsonData.password);
     // console.log("status", jsonData.status);
 
-      fetch(`http://localhost:3000/api/users`, {
+      fetch(`https://79b8-49-229-100-36.ngrok-free.app/api/users`, {
         method: 'POST', // or 'PUT'
         headers: {
           'Content-Type': 'application/json',
@@ -61,7 +50,7 @@ const handleSubmit = (event) => {
   }; //end handleSubmit
 
 
-  if (session) {
+  // if (session) {
     return (
       <>
         <nav className="navbar navbar-expand-lg navbar-light bg-light">
@@ -76,12 +65,12 @@ const handleSubmit = (event) => {
                   <Link className="nav-link" href="./">Home</Link>
                 </li>
               </ul>
-              <div className="navbar-text ms-auto">
+              {/* <div className="navbar-text ms-auto">
                 {session.user.email}
                 <button className="btn btn-danger ms-2" onClick={() => signOut()}>
                   Sign out
                 </button>
-              </div>
+              </div> */}
             </div>
           </div>
         </nav>
@@ -132,39 +121,39 @@ const handleSubmit = (event) => {
     );
   }
 
-  return (
-    <>
-      <nav className="navbar navbar-expand-lg navbar-light bg-light">
-        <div className="container">
-          <Link className="navbar-brand" href="/">My App</Link>
-          <button className="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-            <span className="navbar-toggler-icon"></span>
-          </button>
-          <div className="collapse navbar-collapse" id="navbarNav">
-            <ul className="navbar-nav">
-              <li className="nav-item">
-                <Link className="nav-link" href="/">Home</Link>
-              </li>
-              <li className="nav-item">
-                <Link className="nav-link" href="/about">About</Link>
-              </li>
-            </ul>
-            <div className="navbar-text ms-auto">
-              Not signed in
-              <button className="btn btn-primary ms-2" onClick={() => signIn()}>
-                Sign in
-              </button>
-            </div>
-          </div>
-        </div>
-      </nav>
+//   return (
+//     <>
+//       <nav className="navbar navbar-expand-lg navbar-light bg-light">
+//         <div className="container">
+//           <Link className="navbar-brand" href="/">My App</Link>
+//           <button className="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+//             <span className="navbar-toggler-icon"></span>
+//           </button>
+//           <div className="collapse navbar-collapse" id="navbarNav">
+//             <ul className="navbar-nav">
+//               <li className="nav-item">
+//                 <Link className="nav-link" href="/">Home</Link>
+//               </li>
+//               <li className="nav-item">
+//                 <Link className="nav-link" href="/about">About</Link>
+//               </li>
+//             </ul>
+//             <div className="navbar-text ms-auto">
+//               Not signed in
+//               <button className="btn btn-primary ms-2" onClick={() => signIn()}>
+//                 Sign in
+//               </button>
+//             </div>
+//           </div>
+//         </div>
+//       </nav>
 
-      <div className="container mt-5">
-        <p>Not signed in</p>
-        <button className="btn btn-primary" onClick={() => signIn()}>
-          Sign in
-        </button>
-      </div>
-    </>
-  );
-}
+//       <div className="container mt-5">
+//         <p>Not signed in</p>
+//         <button className="btn btn-primary" onClick={() => signIn()}>
+//           Sign in
+//         </button>
+//       </div>
+//     </>
+//   );
+// }

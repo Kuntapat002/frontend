@@ -52,13 +52,13 @@ export default function index() {
 <div id="carouselExampleFade" className="carousel slide carousel-fade">
   <div className="carousel-inner">
     <div className="carousel-item active" data-bs-interval="20000">
-      <Image src="/p1.jpg" className="d-block w-100" alt="jpg" />
+      {/* <Image src="#" className="d-block width-100" alt="jpg" width="#" height="#" /> */}
     </div>
     <div className="carousel-item" data-bs-interval="20000">
-      <Image src="/p2.jpg" className="d-block w-100" alt="jpg" />
+      {/* <Image src="#" className="d-block width-100" alt="jpg" width="#" height="#" /> */}
     </div>
     <div className="carousel-item" data-bs-interval="20000">
-      <Image src="/p3.jpg" className="d-block w-100" alt="jpg" />
+      {/* <Image src="#" className="d-block w-100" alt="jpg" width="#" height="#" /> */}
     </div>
   </div>
   <button className="carousel-control-prev" type="button" data-bs-target="#carouselExampleFade" data-bs-slide="prev">
@@ -81,7 +81,7 @@ export default function index() {
             <svg className="bd-placeholder-img card-img-top" width="100%" height={225} xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder: Thumbnail" preserveAspectRatio="xMidYMid slice" focusable="false">
             <title>Placeholder</title>
             <rect width="100%" height="100%" fill="#55595c" />
-            <image xlinkHref="p4.jpg" width="100%" height="100%" />
+            <image xlinkHref="#" width="100%" height="100%" />
             </svg>
 
 
@@ -102,7 +102,7 @@ export default function index() {
             <svg className="bd-placeholder-img card-img-top" width="100%" height={225} xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder: Thumbnail" preserveAspectRatio="xMidYMid slice" focusable="false">
             <title>Placeholder</title>
             <rect width="100%" height="100%" fill="#55595c" />
-            <image xlinkHref="p5.jpg" width="100%" height="100%" />
+            <image xlinkHref="#" width="100%" height="100%" />
             </svg>
 
 
@@ -123,7 +123,7 @@ export default function index() {
             <svg className="bd-placeholder-img card-img-top" width="100%" height={225} xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder: Thumbnail" preserveAspectRatio="xMidYMid slice" focusable="false">
             <title>Placeholder</title>
             <rect width="100%" height="100%" fill="#55595c" />
-            <image xlinkHref="p5A.jpg" width="100%" height="100%" />
+            <image xlinkHref="#" width="100%" height="100%" />
             </svg>              
             
 
@@ -144,7 +144,7 @@ export default function index() {
             <svg className="bd-placeholder-img card-img-top" width="100%" height={225} xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder: Thumbnail" preserveAspectRatio="xMidYMid slice" focusable="false">
             <title>Placeholder</title>
             <rect width="100%" height="100%" fill="#55595c" />
-            <image xlinkHref="p7.jpg" width="100%" height="100%" />
+            <image xlinkHref="#" width="100%" height="100%" />
             </svg>              
             
 
@@ -165,7 +165,7 @@ export default function index() {
             <svg className="bd-placeholder-img card-img-top" width="100%" height={225} xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder: Thumbnail" preserveAspectRatio="xMidYMid slice" focusable="false">
             <title>Placeholder</title>
             <rect width="100%" height="100%" fill="#55595c" />
-            <image xlinkHref="p8.jpg" width="100%" height="100%" />
+            <image xlinkHref="#" width="100%" height="100%" />
             </svg>              
             
             
@@ -186,7 +186,7 @@ export default function index() {
             <svg className="bd-placeholder-img card-img-top" width="100%" height={225} xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder: Thumbnail" preserveAspectRatio="xMidYMid slice" focusable="false">
             <title>Placeholder</title>
             <rect width="100%" height="100%" fill="#55595c" />
-            <image xlinkHref="p9.jpg" width="100%" height="100%" />
+            <image xlinkHref="#" width="100%" height="100%" />
             </svg>              
             
             
@@ -207,7 +207,7 @@ export default function index() {
             <svg className="bd-placeholder-img card-img-top" width="100%" height={225} xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder: Thumbnail" preserveAspectRatio="xMidYMid slice" focusable="false">
             <title>Placeholder</title>
             <rect width="100%" height="100%" fill="#55595c" />
-            <image xlinkHref="p10.jpg" width="100%" height="100%" />
+            <image xlinkHref="#" width="100%" height="100%" />
             </svg>              
             
             
@@ -228,7 +228,7 @@ export default function index() {
             <svg className="bd-placeholder-img card-img-top" width="100%" height={225} xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder: Thumbnail" preserveAspectRatio="xMidYMid slice" focusable="false">
             <title>Placeholder</title>
             <rect width="100%" height="100%" fill="#55595c" />
-            <image xlinkHref="p11.png" width="100%" height="100%" />
+            <image xlinkHref="#" width="100%" height="100%" />
             </svg>              
             
             
@@ -249,7 +249,7 @@ export default function index() {
             <svg className="bd-placeholder-img card-img-top" width="100%" height={225} xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder: Thumbnail" preserveAspectRatio="xMidYMid slice" focusable="false">
             <title>Placeholder</title>
             <rect width="100%" height="100%" fill="#55595c" />
-            <image xlinkHref="p12.jpg" width="100%" height="100%" />
+            <image xlinkHref="#" width="100%" height="100%" />
             </svg>              
             
             
