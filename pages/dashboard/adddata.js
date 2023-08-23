@@ -27,7 +27,7 @@ const handleSubmit = (event) => {
     // console.log("password", jsonData.password);
     // console.log("status", jsonData.status);
 
-      fetch(`https://3c4d-49-229-108-181.ngrok-free.app/api/users`, {
+      fetch(`https://6961-49-229-108-181.ngrok-free.app/api/users`, {
         method: 'POST', // or 'PUT'
         headers: {
           'Content-Type': 'application/json',
